@@ -20,7 +20,7 @@
         @foreach (var item in Model.Policies)
         {
             <tr>
-                <td>@item.PolicyNumber.</td>
+                <td><a asp-page="/Details" asp-route-number=@item.PolicyNumber>@item.PolicyNumber</a></td>
                 <td>@item.PolicyName </td>
                 <td>@item.PolicyType</td>
                 <td>@item.PolicyPeriod</td>
