@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <p>@ViewData["SubTitle"]</p>
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Policy Number</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Period</th>
+            <th>Premium Amount</th>
+        </tr>
+        @foreach (var item in Model.Policies)
+        {
+            <tr>
+                <td>@item.PolicyNumber.</td>
+                <td>@item.PolicyName </td>
+                <td>@item.PolicyType</td>
+                <td>@item.PolicyPeriod</td>
+                <td>@item.Amount.</td>
+            </tr>
+        }
+    </table>
+</div>
