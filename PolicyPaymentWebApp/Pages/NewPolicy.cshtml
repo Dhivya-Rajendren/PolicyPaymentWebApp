@@ -4,36 +4,16 @@
 }
 
 
-   <table class="table table-bordered">
-        <tr>
-            <th>Policy Number</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Period</th>
-            <th>Premium Amount</th>
-        </tr>
-        @foreach (var item in Model.Policies)
-        {
-            <tr>
-                <td>@item.PolicyNumber</td>
-                <td>@item.PolicyName </td>
-                <td>@item.PolicyType</td>
-                <td>@item.PolicyPeriod</td>
-                <td>@item.Amount.</td>
-            </tr>
-        }
-    </table>
     
 
 <form method="post">
 <div class="w-25 ">
-    <input asp-for=_Policy.PolicyNumber class="form-control m-2" placeholder="Enter the Policy Number"/>
-        <input asp-for=_Policy.PolicyName class=" form-control m-2 " placeholder="Enter the Policy Name"/>
+        <input asp-for="_Policy.PolicyName" class=" form-control m-2 " placeholder="Enter the Policy Name"/>
 
-            <input asp-for=_Policy.PolicyType class="form-control  m-2"placeholder="Enter the Policy TYpe"/>
+            <input asp-for="_Policy.PolicyType" class="form-control  m-2"placeholder="Enter the Policy TYpe"/>
 
-                <input asp-for=_Policy.PolicyPeriod class="form-control m-2" placeholder="Enter the Policy Period"/>
-                    <input asp-for=_Policy.Amount class="form-control m-2" placeholder="Enter the Premium Amount"/>
+                <input asp-for="_Policy.PolicyPeriod" class="form-control m-2" placeholder="Enter the Policy Period"/>
+                    <input asp-for="_Policy.Amount" class="form-control m-2" placeholder="Enter the Premium Amount"/>
 <input type="submit"  value="Add Policy"/>
 </div>
 </form>

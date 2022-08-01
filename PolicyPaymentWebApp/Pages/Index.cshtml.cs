@@ -13,10 +13,11 @@ namespace PolicyPaymentWebApp.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         IPolicyRepository repo ;
-        public IndexModel(ILogger<IndexModel> logger,IPolicyRepository repo)
+        PolicyPaymentDbContext dbContext;
+        public IndexModel(ILogger<IndexModel> logger,PolicyPaymentDbContext dbContext)
         {
             _logger = logger;
-            this.repo = repo;
+            this.dbContext = dbContext;
         }
         public IEnumerable<Policy> Policies { get; set; }
         public void OnGet()
@@ -24,7 +25,9 @@ namespace PolicyPaymentWebApp.Pages
             string pageTitle = "Policy Payment";
             ViewData["Title"] = pageTitle;
             ViewData["SubTitle"] = " Policy Details";
-            Policies = repo.GetPolicies();
+          
+
+            Policies = dbContext.Policies.ToList();
          
 
 
