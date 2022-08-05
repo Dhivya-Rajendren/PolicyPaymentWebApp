@@ -21,11 +21,11 @@ namespace DI_RazorPages_Demo.Pages
 
         public void OnGet()
         {
-            
+            configuration.GetConnectionString("");
             //   IEmployee employee = new Employee();// No direct dependency// Employee class controls the object creation 
             if (configuration.GetValue<bool>("Features:HomePage:EnableMessage"))
             {
-                ViewData["Message"] = "This is Employee List";
+                ViewData["Message"] = configuration.GetValue<string>("Features:HomePage:PageTitle");
             }
 
            Employees= employee.GetEmployees();

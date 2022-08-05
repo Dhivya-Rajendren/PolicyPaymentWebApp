@@ -3,5 +3,6 @@
     public interface IEmployee
     {
         List<Employee> GetEmployees();
+        List<DeptEmpCount> GetDeptEmpCount();
     }
 }

@@ -4,6 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
+@await Component.InvokeAsync("DeptCount");
 <div class="text-center">
     <h1 class="display-4">@ViewData["Message"]</h1>
    <table border="1">

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<DeptEmpCount>
+
+
+
+<h3>Employee Count</h3>
+<table border=1>
+    <tr>
+        <th>Department</th>
+        <th>Count</th>
+    </tr>
+   @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Department</td>
+            <td>@item.Count</td>
+        </tr>
+    }
+</table>

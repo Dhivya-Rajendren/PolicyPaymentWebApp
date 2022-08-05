@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolicyPaymentWebApp", "PolicyPaymentWebApp\PolicyPaymentWebApp.csproj", "{CE11DF6D-75E4-4287-9E5D-4A75FAA71D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_RazorPages_Demo", "DI_RazorPages_Demo\DI_RazorPages_Demo.csproj", "{D6AFCB92-7133-4744-891F-29D09EC30F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI_RazorPages_Demo", "DI_RazorPages_Demo\DI_RazorPages_Demo.csproj", "{D6AFCB92-7133-4744-891F-29D09EC30F28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
